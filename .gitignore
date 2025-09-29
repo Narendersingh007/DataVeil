@@ -1,0 +1,9 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated files
+stego_*
+
+# OS-specific
+.DS_Store
