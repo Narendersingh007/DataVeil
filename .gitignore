@@ -7,3 +7,7 @@ stego_*
 
 # OS-specific
 .DS_Store
+
+
+# sample files
+Sample_cover.*
