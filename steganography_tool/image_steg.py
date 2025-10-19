@@ -19,7 +19,8 @@ def encode_message_in_image(image_data, secret_message):
     max_bytes = (image_data.shape[0] * image_data.shape[1] * 3) // 8
     print(f"Maximum bytes to encode: {max_bytes}")
     
-    if len(secret_message) > max_bytes:
+    # Check if the message + delimiter will fit
+    if len(secret_message) + 5 > max_bytes:
         raise ValueError("Error: Message is too long to be encoded in this image.")
 
     data_with_delimiter = secret_message + '*^*^*'
@@ -48,24 +49,36 @@ def encode_message_in_image(image_data, secret_message):
     return img_data_copy
 
 def decode_message_from_image(image_data):
-    """Decodes a message from an image and returns the string."""
+    """Decodes a message from an image efficiently and returns the string."""
     data_binary = ""
+    decoded_data = ""
+    delimiter = "*^*^*"
+    
     for row in image_data:
         for pixel in row:
             r, g, b = msgtobinary(pixel)
-            data_binary += r[-1]
-            data_binary += g[-1]
-            data_binary += b[-1]
             
-    total_bytes = [data_binary[i: i+8] for i in range(0, len(data_binary), 8)]
+            # Process LSBs one bit at a time
+            for bit in [r[-1], g[-1], b[-1]]:
+                data_binary += bit
+                
+                if len(data_binary) == 8:
+                    # We have a full byte
+                    try:
+                        decoded_char = chr(int(data_binary, 2))
+                        decoded_data += decoded_char
+                    except ValueError:
+                        # This can happen if the data is not valid ASCII
+                        pass # Ignore invalid byte
+                    data_binary = "" # Reset for the next byte
+
+                    # Check if the end of our string is the delimiter
+                    if decoded_data.endswith(delimiter):
+                        # Found it! Stop and return the message.
+                        return decoded_data[:-len(delimiter)]
     
-    decoded_data = ""
-    for byte in total_bytes:
-        decoded_data += chr(int(byte, 2))
-        if decoded_data[-5:] == "*^*^*":
-            return decoded_data[:-5]
-    
-    return None # Return None if no delimiter is found
+    # If we get through the whole image and never find the delimiter
+    return None
 
 # --- Functions for Command-Line Interface ---
 
