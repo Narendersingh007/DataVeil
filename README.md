@@ -24,30 +24,30 @@ A versatile steganography suite written in Python to hide secret messages within
 
 ## File Structure 🌳
 ```
-├── .gitignore
-├── .streamlit
-    └── config.toml
-├── LICENSE
-├── README.md
-├── Sample_cover_files
-    ├── cover_audio.wav
-    ├── cover_image.jpg
-    ├── cover_text.txt
-    └── cover_video.mp4
-├── assets
-    └── background.jpg
-├── main.py
-├── requirements.txt
-├── steganography_tool
-    ├── __init__.py
-    ├── app.py
-    ├── audio_steg.py
-    ├── crypto_utils.py
-    ├── image_steg.py
-    ├── text_steg.py
-    └── video_steg.py
-└── tests
-    └── __init__.py
+├── .gitignore                  # Tells Git which files/folders to ignore (like temp files, virtual envs)
+├── .streamlit/                 # Folder for Streamlit-specific configuration
+│   └── config.toml             # Streamlit config (e.g., set max file upload size)
+├── LICENSE                     # Contains the project's open-source license details (MIT)
+├── README.md                   # The main documentation file you see on GitHub, explaining the project
+├── Sample_cover_files/         # Directory containing example media files for testing the tools
+│   ├── cover_audio.wav         # Sample WAV audio file to hide data in
+│   ├── cover_image.jpg         # Sample JPG image file to hide data in
+│   ├── cover_text.txt          # Sample TXT text file to hide data in
+│   └── cover_video.mp4         # Sample MP4 video file to hide data in
+├── assets/                     # Folder for static assets used by the app (like UI images)
+│   └── background.jpg          # Background image used in the Streamlit UI (if using image background)
+├── main.py                     # The script to run the Command-Line Interface (CLI) version of the tool
+├── requirements.txt            # Lists the necessary Python packages (like streamlit, opencv-python) to install
+├── steganography_tool/         # The main Python package containing all the core logic and the GUI app
+│   ├── __init__.py             # An empty file that tells Python this directory is a package
+│   ├── app.py                  # The script to run the Streamlit Web Interface (GUI)
+│   ├── audio_steg.py           # Contains the Python functions for audio steganography
+│   ├── crypto_utils.py         # Contains the encryption/decryption helper functions (currently RC4)
+│   ├── image_steg.py           # Contains the Python functions for image steganography
+│   ├── text_steg.py            # Contains the Python functions for text steganography (using Zero-Width Chars)
+│   └── video_steg.py           # Contains the Python functions for video steganography
+└── tests/                      # Folder intended for automated tests (currently basic)
+    └── __init__.py             # Makes the tests directory a Python package
 ```
 ## How it Works 🧠
 
