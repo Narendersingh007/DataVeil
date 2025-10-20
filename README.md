@@ -59,11 +59,14 @@ This tool primarily uses **Least Significant Bit (LSB) steganography** for image
 -   **Encryption:** For video, the message is first encrypted using RC4 with a user-provided key before LSB insertion, adding another layer of security.
 
 ## Screenshots 📸
+<img width="1708" height="888" alt="Screenshot 2025-10-20 at 9 59 41 AM" src="https://github.com/user-attachments/assets/d5cce600-a64e-491a-8f88-9d7ea2379f33" />
+<img width="1710" height="885" alt="Screenshot 2025-10-20 at 9 59 59 AM" src="https://github.com/user-attachments/assets/39a2a112-769d-4b3f-ac46-d7a48122ae39" />
+<img width="1710" height="886" alt="Screenshot 2025-10-20 at 10 00 16 AM" src="https://github.com/user-attachments/assets/01085c06-d48d-4a39-a36f-6220a91d6a25" />
+<img width="1709" height="884" alt="Screenshot 2025-10-20 at 10 00 36 AM" src="https://github.com/user-attachments/assets/3c2ed555-890b-4394-8291-6ff2c884b089" />
 
-*(Add screenshots of your cool Streamlit UI here!)*
 
-*Example:*
-![Screenshot of Image Steganography Tool](link_to_your_screenshot.png)
+
+
 
 ## Setup and Installation 🚀
 
