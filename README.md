@@ -59,11 +59,28 @@ This tool primarily uses **Least Significant Bit (LSB) steganography** for image
 -   **Encryption:** For video, the message is first encrypted using RC4 with a user-provided key before LSB insertion, adding another layer of security.
 
 ## Screenshots 📸
-<img width="1708" height="888" alt="Screenshot 2025-10-20 at 9 59 41 AM" src="https://github.com/user-attachments/assets/d5cce600-a64e-491a-8f88-9d7ea2379f33" />
-<img width="1710" height="885" alt="Screenshot 2025-10-20 at 9 59 59 AM" src="https://github.com/user-attachments/assets/39a2a112-769d-4b3f-ac46-d7a48122ae39" />
-<img width="1710" height="886" alt="Screenshot 2025-10-20 at 10 00 16 AM" src="https://github.com/user-attachments/assets/01085c06-d48d-4a39-a36f-6220a91d6a25" />
-<img width="1709" height="884" alt="Screenshot 2025-10-20 at 10 00 36 AM" src="https://github.com/user-attachments/assets/3c2ed555-890b-4394-8291-6ff2c884b089" />
 
+### Text Steganography Interface
+*Encode and decode messages using invisible zero-width characters in text files.*
+<img width="1710" height="886" alt="Screenshot of Text Steganography tool showing Encode/Decode options" src="https://github.com/user-attachments/assets/a1ad7346-9172-43bd-a026-fd9c98b0ab52" />
+
+---
+
+### Image Steganography Interface
+*Hide secret data within the least significant bits (LSB) of PNG or JPG image files.*
+<img width="1710" height="888" alt="Screenshot of Image Steganography tool showing Encode/Decode options" src="https://github.com/user-attachments/assets/841d9d3e-3284-4b81-a7d2-8be6f518ce9e" />
+
+---
+
+### Audio Steganography Interface
+*Embed messages into the LSB of WAV audio file bytes.*
+<img width="1707" height="884" alt="Screenshot of Audio Steganography tool showing Encode/Decode options" src="https://github.com/user-attachments/assets/36cb08e0-e629-4ac5-9c94-654e434dc870" />
+
+---
+
+### Video Steganography Interface
+*Encrypt and hide data within a specific frame of MP4 or AVI video files using a lossless codec.*
+<img width="1710" height="887" alt="Screenshot of Video Steganography tool showing Encode/Decode options including frame number and key" src="https://github.com/user-attachments/assets/86469fc5-26c3-43ea-962a-64f31ba1140f" />
 
 
 
