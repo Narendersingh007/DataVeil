@@ -2,6 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dataveil.streamlit.app/)
 
 A versatile steganography suite written in Python to hide secret messages within various digital media files, including images, text, audio, and video. This project provides both a command-line interface (CLI) and a user-friendly web-based GUI built with Streamlit.
 
