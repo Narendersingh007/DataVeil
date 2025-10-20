@@ -23,13 +23,13 @@ st.set_page_config(
 
 
 # --- SIDEBAR ---
+st.title("# DataVeil 🔏")
 with st.sidebar:
     st.title("🔏 Steganography Suite")
     st.write("Hide your secret messages in digital media. This tool uses classic LSB steganography.")
     tool = st.sidebar.selectbox("Select a steganography method:",
                                 ["Image Steganography", "Text Steganography", "Audio Steganography", "Video Steganography"])
-    st.info("All files are processed in your browser. No data is saved on any server.")
-
+   
 # --- MAIN PAGE ---
 
 # --- IMAGE STEGANOGRAPHY ---
@@ -190,7 +190,7 @@ elif tool == "Audio Steganography":
 elif tool == "Video Steganography":
     st.header("🎬 Video Steganography")
     st.write("Hides encrypted data in a single frame of a video file.")
-    st.info("ℹ️ **How this works:** This tool uses a **lossless** codec (`FFV1`) to save the new video. This is required to prevent the hidden data from being destroyed, but the output file will be **very large**.")
+   
 
     col1, col2 = st.columns(2)
 
