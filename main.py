@@ -1,5 +1,5 @@
 # main.py
-from stenography_tool import image_steg, text_steg, audio_steg, video_steg
+from steganography_tool import image_steg, text_steg, audio_steg, video_steg
 
 def main():
     print("\t\t STEGANOGRAPHY")
