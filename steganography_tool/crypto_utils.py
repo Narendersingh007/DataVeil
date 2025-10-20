@@ -1,3 +1,4 @@
+# steganography_tool/crypto_utils.py
 import numpy as np
 
 def KSA(key):
@@ -28,10 +29,9 @@ def _prepare_key_array(s):
     """Helper to convert string key to array of ASCII values."""
     return [ord(c) for c in s]
 
-def encryption(plaintext):
-    """Encrypts plaintext using RC4."""
-    key = input("Enter the key for encryption: ")
-    key = _prepare_key_array(key)
+def encryption(plaintext, key_str):
+    """Encrypts plaintext using RC4 with a provided key string."""
+    key = _prepare_key_array(key_str)
     
     S = KSA(key)
     keystream = np.array(PRGA(S, len(plaintext)))
@@ -42,10 +42,9 @@ def encryption(plaintext):
     ctext = ''.join([chr(c) for c in cipher])
     return ctext
 
-def decryption(ciphertext):
-    """Decrypts ciphertext using RC4."""
-    key = input("Enter the key for decryption: ")
-    key = _prepare_key_array(key)
+def decryption(ciphertext, key_str):
+    """Decrypts ciphertext using RC4 with a provided key string."""
+    key = _prepare_key_array(key_str)
     
     S = KSA(key)
     keystream = np.array(PRGA(S, len(ciphertext)))
